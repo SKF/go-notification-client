@@ -10,7 +10,7 @@ import (
 
 type ProblemDecoder struct{}
 
-//nolint:exhaustivestruct,ireturn,wrapcheck
+//nolint:exhaustruct,ireturn,wrapcheck
 func (p *ProblemDecoder) DecodeProblem(ctx context.Context, r *http.Response) (problems.Problem, error) {
 	decoder := json.NewDecoder(r.Body)
 
