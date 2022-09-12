@@ -1,6 +1,6 @@
 # go-notification-client
 
-This is the client library for the Notifiation API.
+This is the client library for the Notification API.
 
 ## Example
 
