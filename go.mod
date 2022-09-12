@@ -5,6 +5,8 @@ go 1.17
 require (
 	github.com/SKF/go-rest-utility v0.11.0
 	github.com/SKF/go-utility/v2 v2.30.0
+	github.com/go-openapi/strfmt v0.21.3
+	github.com/go-openapi/swag v0.0.0-20160704191624-1d0bd113de87
 )
 
 require (
@@ -13,6 +15,7 @@ require (
 	github.com/DataDog/sketches-go v1.4.1 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/SKF/go-enlight-middleware v0.6.0 // indirect
+	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef // indirect
 	github.com/aws/aws-sdk-go v1.44.88 // indirect
 	github.com/aws/aws-sdk-go-v2 v1.16.12 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.19 // indirect
@@ -23,15 +26,21 @@ require (
 	github.com/dgraph-io/ristretto v0.1.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/go-http-utils/headers v0.0.0-20181008091004-fed159eddc2a // indirect
+	github.com/go-openapi/errors v0.20.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
+	github.com/josharian/intern v1.0.0 // indirect
 	github.com/jtacoma/uritemplates v1.0.0 // indirect
+	github.com/mailru/easyjson v0.7.7 // indirect
+	github.com/mitchellh/mapstructure v1.4.2 // indirect
+	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/tinylib/msgp v1.1.6 // indirect
+	go.mongodb.org/mongo-driver v1.10.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
