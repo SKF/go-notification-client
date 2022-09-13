@@ -7,6 +7,7 @@ require (
 	github.com/SKF/go-utility/v2 v2.30.0
 	github.com/go-openapi/strfmt v0.21.3
 	github.com/go-openapi/swag v0.0.0-20160704191624-1d0bd113de87
+	github.com/stretchr/testify v1.8.0
 )
 
 require (
@@ -23,6 +24,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.15.20 // indirect
 	github.com/aws/smithy-go v1.13.0 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgraph-io/ristretto v0.1.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/go-http-utils/headers v0.0.0-20181008091004-fed159eddc2a // indirect
@@ -39,6 +41,7 @@ require (
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/philhofer/fwd v1.1.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/tinylib/msgp v1.1.6 // indirect
 	go.mongodb.org/mongo-driver v1.10.0 // indirect
 	go.opencensus.io v0.23.0 // indirect
