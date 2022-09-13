@@ -2,7 +2,7 @@
 # https://github.com/golangci/golangci-lint/blob/master/.golangci.example.yml
 
 # To remedy '<file>: File is not `goimports`-ed (goimports)' do:
-# goimports -w -local github.com/SKF/go-pas-client <file>
+# goimports -w -local github.com/SKF/go-notification-client <file>
 
 run:
   timeout: 5m
