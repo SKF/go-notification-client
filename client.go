@@ -13,9 +13,9 @@ import (
 type API interface {
 	GetNotificationType(context.Context, string) (models.NotificationType, error)
 	GetNotificationTypes(context.Context) ([]models.NotificationType, error)
-	PostInitiatedNotifiction(context.Context, models.InitiatedNotification) (string, error)
-	GetInitiatedNotifiction(context.Context, string) (models.InitiatedNotification, error)
-	DeleteInitiatedNotifiction(context.Context, string) error
+	PostInitiatedNotification(context.Context, models.InitiatedNotification) (string, error)
+	GetInitiatedNotification(context.Context, string) (models.InitiatedNotification, error)
+	DeleteInitiatedNotification(context.Context, string) error
 }
 
 type Client struct {
@@ -89,7 +89,7 @@ func (c *Client) GetNotificationTypes(ctx context.Context) ([]models.Notificatio
 	return notificationTypes, nil
 }
 
-func (c Client) PostInitiatedNotifiction(ctx context.Context, initialNotification models.InitiatedNotification) (string, error) {
+func (c Client) PostInitiatedNotification(ctx context.Context, initialNotification models.InitiatedNotification) (string, error) {
 	request := rest.Post("v1/initiated-notifications").
 		WithJSONPayload(initialNotification.ToInternal()).
 		SetHeader("Accept", "application/json")
@@ -104,7 +104,7 @@ func (c Client) PostInitiatedNotifiction(ctx context.Context, initialNotificatio
 	return response.ExternalID, nil
 }
 
-func (c Client) GetInitiatedNotifiction(ctx context.Context, externalID string) (models.InitiatedNotification, error) {
+func (c Client) GetInitiatedNotification(ctx context.Context, externalID string) (models.InitiatedNotification, error) {
 	request := rest.Get("v1/initiated-notifications/{externalId}").
 		Assign("externalId", externalID).
 		SetHeader("Accept", "application/json")
@@ -124,7 +124,7 @@ func (c Client) GetInitiatedNotifiction(ctx context.Context, externalID string) 
 	return initiatedNotification, nil
 }
 
-func (c Client) DeleteInitiatedNotifiction(ctx context.Context, externalID string) error {
+func (c Client) DeleteInitiatedNotification(ctx context.Context, externalID string) error {
 	request := rest.Delete("v1/initiated-notifications/{externalId}").
 		Assign("externalId", externalID)
 
