@@ -101,7 +101,6 @@ func (c *Client) PostInitiatedNotification(
 
 	if err := c.DoAndUnmarshal(ctx, request, &response); err != nil {
 		return "", fmt.Errorf("posting initiated notification failed: %w", err)
-
 	}
 
 	return response.ExternalID, nil
