@@ -9,8 +9,6 @@ type NotificationType struct {
 	QualifyingAction                   string
 	DefaultDeliveryChannel             string
 	DefaultDeliveryScheduleType        string
-	DailyDeliveryTimeHour              int64
-	DailyDeliveryTimeMinute            int64
 	MinimumSecondsBetweenNotifications int64
 }
 
@@ -19,8 +17,6 @@ func (n *NotificationType) FromInternal(internal internal_models.ModelsNotificat
 	n.QualifyingAction = internal.QualifyingAction
 	n.DefaultDeliveryChannel = internal.DefaultDeliveryChannel
 	n.DefaultDeliveryScheduleType = internal.DefaultDeliveryScheduleType
-	n.DailyDeliveryTimeHour = internal.DailyDeliveryTimeHour
-	n.DailyDeliveryTimeMinute = internal.DailyDeliveryTimeMinute
 	n.MinimumSecondsBetweenNotifications = internal.MinimumSecondsBetweenNotifications
 
 	return nil

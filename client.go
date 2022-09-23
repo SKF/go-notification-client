@@ -85,3 +85,49 @@ func (c *Client) GetNotificationTypes(ctx context.Context) ([]models.Notificatio
 
 	return notificationTypes, nil
 }
+
+func (c Client) PostInitiatedNotifiction(ctx context.Context, initialNotification models.InitiatedNotification) (string, error) {
+	request := rest.Post("v1/initiated-notifications").
+		WithJSONPayload(initialNotification.ToInternal()).
+		SetHeader("Accept", "application/json")
+
+	var response internal_models.ModelsPostInitiatedNotificationResponse
+
+	if err := c.DoAndUnmarshal(ctx, request, &response); err != nil {
+		return "", fmt.Errorf("posting initiated notification failed: %w", err)
+
+	}
+
+	return response.ExternalID, nil
+}
+
+func (c Client) GetInitiatedNotifiction(ctx context.Context, externalID string) (models.InitiatedNotification, error) {
+	request := rest.Get("v1/initiated-notifications/{externalId}").
+		Assign("externalId", externalID).
+		SetHeader("Accept", "application/json")
+
+	var response internal_models.ModelsGetInitiatedNotificationResponse
+
+	if err := c.DoAndUnmarshal(ctx, request, &response); err != nil {
+		return models.InitiatedNotification{}, fmt.Errorf("getting initiated notification failed: %w", err)
+	}
+
+	initiatedNotification := models.InitiatedNotification{}
+
+	if err := initiatedNotification.FromInternal(response); err != nil {
+		return models.InitiatedNotification{}, fmt.Errorf("converting initiated notification failed: %w", err)
+	}
+
+	return initiatedNotification, nil
+}
+
+func (c Client) DeleteInitiatedNotifiction(ctx context.Context, externalID string) error {
+	request := rest.Delete("v1/initiated-notifications/{externalId}").
+		Assign("externalId", externalID)
+
+	if _, err := c.Do(ctx, request); err != nil {
+		return fmt.Errorf("deleting initiated notification failed: %w", err)
+	}
+
+	return nil
+}

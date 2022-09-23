@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/SKF/go-rest-utility v0.11.0
 	github.com/SKF/go-utility/v2 v2.30.0
+	github.com/go-openapi/errors v0.20.2
 	github.com/go-openapi/strfmt v0.21.3
 	github.com/go-openapi/swag v0.0.0-20160704191624-1d0bd113de87
 	github.com/stretchr/testify v1.8.0
@@ -28,7 +29,6 @@ require (
 	github.com/dgraph-io/ristretto v0.1.0 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/go-http-utils/headers v0.0.0-20181008091004-fed159eddc2a // indirect
-	github.com/go-openapi/errors v0.20.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
 	github.com/golang/glog v1.0.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect

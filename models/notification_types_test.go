@@ -11,6 +11,8 @@ import (
 )
 
 func Test_NotificationType(t *testing.T) {
+	t.Parallel()
+
 	tests := []struct {
 		name     string
 		expected models.NotificationType
@@ -28,8 +30,6 @@ func Test_NotificationType(t *testing.T) {
 				QualifyingAction:                   "SERVICE::ACTION",
 				DefaultDeliveryChannel:             "sns",
 				DefaultDeliveryScheduleType:        "cron",
-				DailyDeliveryTimeHour:              1,
-				DailyDeliveryTimeMinute:            30,
 				MinimumSecondsBetweenNotifications: 60,
 			},
 			given: internal_models.ModelsNotificationTypeResponse{
@@ -37,23 +37,23 @@ func Test_NotificationType(t *testing.T) {
 				QualifyingAction:                   "SERVICE::ACTION",
 				DefaultDeliveryChannel:             "sns",
 				DefaultDeliveryScheduleType:        "cron",
-				DailyDeliveryTimeHour:              1,
-				DailyDeliveryTimeMinute:            30,
 				MinimumSecondsBetweenNotifications: 60,
 			},
 		},
 	}
 
-	for _, tt := range tests {
-		tt := tt
+	for _, test := range tests {
+		test := test
 
-		t.Run(tt.name, func(t *testing.T) {
+		t.Run(test.name, func(t *testing.T) {
+			t.Parallel()
+
 			var actual models.NotificationType
 
-			err := actual.FromInternal(tt.given)
+			err := actual.FromInternal(test.given)
 			require.NoError(t, err)
 
-			assert.Equal(t, tt.expected, actual)
+			assert.Equal(t, test.expected, actual)
 		})
 	}
 }

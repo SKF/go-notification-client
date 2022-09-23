@@ -17,17 +17,14 @@ import (
 // swagger:model models.NotificationTypeResponse
 type ModelsNotificationTypeResponse struct {
 
-	// daily delivery time hour
-	DailyDeliveryTimeHour int64 `json:"dailyDeliveryTimeHour,omitempty"`
-
-	// daily delivery time minute
-	DailyDeliveryTimeMinute int64 `json:"dailyDeliveryTimeMinute,omitempty"`
-
 	// default delivery channel
 	DefaultDeliveryChannel string `json:"defaultDeliveryChannel,omitempty"`
 
 	// default delivery schedule type
 	DefaultDeliveryScheduleType string `json:"defaultDeliveryScheduleType,omitempty"`
+
+	// id
+	ID string `json:"id,omitempty"`
 
 	// minimum seconds between notifications
 	MinimumSecondsBetweenNotifications int64 `json:"minimumSecondsBetweenNotifications,omitempty"`
