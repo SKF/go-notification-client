@@ -13,9 +13,9 @@ import (
 type API interface {
 	GetNotificationType(context.Context, string) (models.NotificationType, error)
 	GetNotificationTypes(context.Context) ([]models.NotificationType, error)
-	PostInitiatedNotifiction(ctx context.Context, initialNotification models.InitiatedNotification) (string, error)
-	GetInitiatedNotifiction(ctx context.Context, externalID string) (models.InitiatedNotification, error)
-	DeleteInitiatedNotifiction(ctx context.Context, externalID string) error
+	PostInitiatedNotifiction(context.Context, models.InitiatedNotification) (string, error)
+	GetInitiatedNotifiction(context.Context, string) (models.InitiatedNotification, error)
+	DeleteInitiatedNotifiction(context.Context, string) error
 }
 
 type Client struct {
