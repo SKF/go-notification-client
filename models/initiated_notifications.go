@@ -34,7 +34,7 @@ func (g *InitiatedNotification) FromInternal(internal internal_models.ModelsGetI
 }
 
 func (g *InitiatedNotification) ToInternal() internal_models.ModelsPostInitiatedNotificationRequest {
-	internal := internal_models.ModelsPostInitiatedNotificationRequest{}
+	internal := internal_models.ModelsPostInitiatedNotificationRequest{} //nolint:exhaustruct
 
 	internal.ID = g.ID
 	internal.Body = g.Body

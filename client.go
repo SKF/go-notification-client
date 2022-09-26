@@ -120,7 +120,7 @@ func (c *Client) GetInitiatedNotification(
 		return models.InitiatedNotification{}, fmt.Errorf("getting initiated notification failed: %w", err)
 	}
 
-	initiatedNotification := models.InitiatedNotification{}
+	initiatedNotification := models.InitiatedNotification{} //nolint:exhaustruct
 
 	if err := initiatedNotification.FromInternal(response); err != nil {
 		return models.InitiatedNotification{}, fmt.Errorf("converting initiated notification failed: %w", err)
