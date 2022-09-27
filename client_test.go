@@ -38,8 +38,6 @@ func Test_GetNotificationType(t *testing.T) {
 		QualifyingAction:                   "SERVICE::ACTION",
 		DefaultDeliveryChannel:             "sns",
 		DefaultDeliveryScheduleType:        "cron",
-		DailyDeliveryTimeHour:              1,
-		DailyDeliveryTimeMinute:            30,
 		MinimumSecondsBetweenNotifications: 60,
 	}
 
@@ -61,8 +59,6 @@ func Test_GetNotificationType(t *testing.T) {
 		QualifyingAction:                   "SERVICE::ACTION",
 		DefaultDeliveryChannel:             "sns",
 		DefaultDeliveryScheduleType:        "cron",
-		DailyDeliveryTimeHour:              1,
-		DailyDeliveryTimeMinute:            30,
 		MinimumSecondsBetweenNotifications: 60,
 	}
 
@@ -106,8 +102,6 @@ func Test_GetNotificationTypes(t *testing.T) {
 			QualifyingAction:                   "SERVICE::ACTION",
 			DefaultDeliveryChannel:             "sns",
 			DefaultDeliveryScheduleType:        "cron",
-			DailyDeliveryTimeHour:              1,
-			DailyDeliveryTimeMinute:            30,
 			MinimumSecondsBetweenNotifications: 60,
 		},
 	}
@@ -131,8 +125,6 @@ func Test_GetNotificationTypes(t *testing.T) {
 			QualifyingAction:                   "SERVICE::ACTION",
 			DefaultDeliveryChannel:             "sns",
 			DefaultDeliveryScheduleType:        "cron",
-			DailyDeliveryTimeHour:              1,
-			DailyDeliveryTimeMinute:            30,
 			MinimumSecondsBetweenNotifications: 60,
 		},
 	}

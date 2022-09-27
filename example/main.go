@@ -8,7 +8,7 @@ import (
 
 	dd_http "gopkg.in/DataDog/dd-trace-go.v1/contrib/net/http"
 
-	notification "github.com/SKF/go-notification-client/internal/models"
+	notification "github.com/SKF/go-notification-client"
 	"github.com/SKF/go-rest-utility/client"
 	"github.com/SKF/go-rest-utility/client/auth"
 	"github.com/SKF/go-utility/v2/stages"
